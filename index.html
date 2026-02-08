@@ -24,15 +24,17 @@
         .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
         .allergen-tag { font-size: 0.6rem; color: var(--passione); font-weight: bold; text-transform: uppercase; margin-top: 5px; border-top: 1px solid #333; padding-top: 2px; display: block; }
         
-        .btn-call-float { position: fixed; bottom: 20px; right: 20px; z-index: 99; background-color: var(--passione); color: white; padding: 15px 25px; font-weight: bold; border: 3px solid white; box-shadow: 5px 5px 0px var(--neon); text-transform: uppercase; }
+        .btn-call-float { position: fixed; bottom: 20px; right: 20px; z-index: 99; background-color: var(--passione); color: white; padding: 15px 25px; font-weight: bold; border: 3px solid white; box-shadow: 5px 5px 0px var(--neon); text-transform: uppercase; border-radius: 0; }
+        .social-btn { transition: all 0.3s ease; border: 2px solid #333; }
+        .social-btn:hover { border-color: var(--neon); transform: translateY(-3px); }
     </style>
 </head>
 <body class="antialiased">
 
     <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-[#facc15] text-black p-4 z-[101] border-t-4 border-black translate-y-full transition-transform duration-500 font-bold uppercase text-xs">
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <p>Accettando i cookie potrai visualizzare la mappa interattiva e i font premium.</p>
-            <button onclick="acceptCookies()" class="bg-black text-white px-6 py-2 brutal-shadow">ACCETTO</button>
+            <p>Sito ottimizzato per Pizzeria Anas - Via della Massimilla 80.</p>
+            <button onclick="acceptCookies()" class="bg-black text-white px-6 py-2 brutal-shadow">CHIUDI</button>
         </div>
     </div>
 
@@ -40,11 +42,11 @@
 
     <header class="sticky top-0 z-50 bg-[#0a0a0a] border-b-4 border-[#facc15] p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl md:text-2xl font-bold text-[#facc15] italic">PIZZERIA ANAS</h1>
+            <h1 class="text-xl md:text-2xl font-bold text-[#facc15] italic tracking-tighter">PIZZERIA ANAS</h1>
             <nav class="hidden md:flex items-center gap-6 text-[10px] font-bold uppercase">
                 <a href="#menu" class="hover:text-[#e11d48]">Menu</a>
                 <a href="#confronto" class="hover:text-[#e11d48]">Perché noi</a>
-                <a href="#dove" class="hover:text-[#e11d48]">Dove Siamo</a>
+                <a href="#social" class="hover:text-[#e11d48]">Social</a>
                 <a href="tel:0670451243" class="bg-[#e11d48] text-white px-4 py-2 brutal-shadow-neon italic">ORDINA ORA</a>
             </nav>
         </div>
@@ -68,10 +70,6 @@
                 <p class="text-xs italic text-zinc-300">"La miglior pizza di Massimina! Impasto leggero e ingredienti sempre freschi."</p>
                 <span class="text-[#facc15] font-bold text-[10px] block mt-2">- MARCO R.</span>
             </div>
-            <div class="bg-black p-6 w-[300px] mx-4 border-2 border-zinc-800">
-                <p class="text-xs italic text-zinc-300">"Supplì spettacolari, croccanti e con tanto cuore di mozzarella."</p>
-                <span class="text-[#facc15] font-bold text-[10px] block mt-2">- ELENA V.</span>
-            </div>
         </div>
     </section>
 
@@ -80,7 +78,7 @@
             <h2 class="text-3xl font-bold text-center mb-12 italic text-[#facc15]">ANAS VS INDUSTRIALE</h2>
             <div class="grid md:grid-cols-2 gap-0 border-4 border-[#facc15] brutal-shadow">
                 <div class="p-8 bg-zinc-900 border-b-4 md:border-b-0 md:border-r-4 border-[#facc15]">
-                    <h4 class="text-zinc-500 font-bold mb-6 text-xl">PIZZERIE STANDARD</h4>
+                    <h4 class="text-zinc-500 font-bold mb-6 text-xl tracking-tighter">PIZZERIE STANDARD</h4>
                     <ul class="space-y-4 text-zinc-500 text-sm font-bold">
                         <li>❌ Farine raffinate di bassa qualità</li>
                         <li>❌ Lievitazioni flash (gonfiore addominale)</li>
@@ -89,7 +87,7 @@
                     </ul>
                 </div>
                 <div class="p-8 bg-black">
-                    <h4 class="text-[#facc15] font-bold mb-6 text-xl">LA NOSTRA RESISTENZA</h4>
+                    <h4 class="text-[#facc15] font-bold mb-6 text-xl tracking-tighter">LA NOSTRA RESISTENZA</h4>
                     <ul class="space-y-4 text-white text-sm font-bold">
                         <li>✅ Solo pomodoro 100% Italiano</li>
                         <li>✅ Lunga lievitazione (Alta digeribilità)</li>
@@ -101,10 +99,9 @@
         </div>
     </section>
 
-    <section id="menu" class="py-20 px-4">
+    <section id="menu" class="py-20 px-4 bg-zinc-950">
         <div class="container mx-auto">
             <h3 class="text-3xl font-bold mb-12 text-center italic text-[#facc15]">I PIÙ FAMOSI</h3>
-            
             <div class="menu-grid mb-16">
                 <div class="p-6 border border-zinc-800 hover:border-[#facc15] bg-zinc-900/30 transition-all">
                     <div class="flex justify-between font-bold text-lg mb-2"><span>MARGHERITA</span><span>€ 6,00</span></div>
@@ -127,7 +124,6 @@
                     <span class="allergen-tag">Glutine, Latte</span>
                 </div>
             </div>
-
             <div class="text-center">
                 <a href="https://www.leggimenu.it/menu/pizzeria-anas?v=807534" target="_blank" class="inline-block bg-[#facc15] text-black font-bold px-10 py-5 brutal-shadow uppercase italic hover:scale-105 transition-all">
                     👉 VEDI TUTTO IL MENU (PIÙ DI 50 ARTICOLI)
@@ -136,7 +132,39 @@
         </div>
     </section>
 
-    <section id="dove" class="py-20 px-4 bg-zinc-900 border-y-4 border-[#facc15]">
+    <section id="social" class="py-20 px-4 bg-black border-y-2 border-zinc-800">
+        <div class="container mx-auto text-center">
+            <h3 class="text-2xl font-bold mb-10 italic text-[#facc15]">SOCIAL & RECENSIONI</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                <a href="https://www.tripadvisor.it/Restaurant_Review-g12946238-d33095805-Reviews-Pizzeria_Anas-La_Massimina_Casal_Lumbroso_Province_of_Rome_Lazio.html" target="_blank" class="social-btn p-4 bg-zinc-900 rounded flex flex-col items-center">
+                    <span class="text-[#00af87] font-bold text-xs mb-1 italic">TripAdvisor</span>
+                    <span class="text-[10px] opacity-50 uppercase">Recensioni</span>
+                </a>
+                <a href="https://restaurantguru.it/Pizzeria-Anas-La-Massimina-Casal-Lumbroso" target="_blank" class="social-btn p-4 bg-zinc-900 rounded flex flex-col items-center">
+                    <span class="text-white font-bold text-xs mb-1 italic">Restaurant Guru</span>
+                    <span class="text-[10px] opacity-50 uppercase">Classifica</span>
+                </a>
+                <a href="https://www.paginegialle.it/pizzeriaanas-roma" target="_blank" class="social-btn p-4 bg-zinc-900 rounded flex flex-col items-center">
+                    <span class="text-[#ffcc00] font-bold text-xs mb-1 italic">Pagine Gialle</span>
+                    <span class="text-[10px] opacity-50 uppercase">Info Aziendali</span>
+                </a>
+                <a href="https://www.instagram.com/pizzeriaanassrls/" target="_blank" class="social-btn p-4 bg-zinc-900 rounded flex flex-col items-center">
+                    <span class="text-[#e1306c] font-bold text-xs mb-1 italic">Instagram</span>
+                    <span class="text-[10px] opacity-50 uppercase">Foto & Reel</span>
+                </a>
+                <a href="https://www.facebook.com/people/Pizzeria-Anas/61554029327509/" target="_blank" class="social-btn p-4 bg-zinc-900 rounded flex flex-col items-center">
+                    <span class="text-[#1877f2] font-bold text-xs mb-1 italic">Facebook</span>
+                    <span class="text-[10px] opacity-50 uppercase">Community</span>
+                </a>
+                <a href="https://www.youtube.com/@PizzeriaAnas" target="_blank" class="social-btn p-4 bg-zinc-900 rounded flex flex-col items-center">
+                    <span class="text-[#ff0000] font-bold text-xs mb-1 italic">YouTube</span>
+                    <span class="text-[10px] opacity-50 uppercase">Video</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="dove" class="py-20 px-4 bg-zinc-900">
         <div class="container mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="reveal">
@@ -150,12 +178,12 @@
                         <div class="p-3 border border-[#e11d48] text-[#e11d48] col-span-2 text-center">🛡️ AREA VIDEOSORVEGLIATA</div>
                     </div>
                     
-                    <a href="tel:0670451243" class="mt-8 block text-2xl font-bold text-center p-4 bg-white text-black hover:bg-[#facc15] transition-colors">
+                    <a href="tel:0670451243" class="mt-8 block text-2xl font-bold text-center p-4 bg-white text-black hover:bg-[#facc15] transition-colors border-4 border-black">
                         📞 06 7045 1243
                     </a>
                 </div>
                 
-                <div class="reveal brutal-border h-[400px] bg-black">
+                <div class="reveal brutal-border h-[400px] bg-black overflow-hidden">
                     <iframe 
                         width="100%" 
                         height="100%" 
@@ -163,7 +191,7 @@
                         scrolling="no" 
                         marginheight="0" 
                         marginwidth="0" 
-                        src="https://maps.google.com/maps?q=Via%20della%20Massimilla%2080,%20Roma&t=&z=16&ie=UTF8&iwloc=&output=embed">
+                        src="https://maps.google.com/maps?q=Via%20della%20Massimilla%2080,%20Roma&t=&z=15&ie=UTF8&iwloc=&output=embed">
                     </iframe>
                 </div>
             </div>
@@ -171,7 +199,7 @@
     </section>
 
     <footer class="py-16 bg-black text-center border-t-2 border-zinc-800">
-        <h5 class="text-[#facc15] font-sync text-xl mb-6 italic">Pizzeria Anas</h5>
+        <h5 class="text-[#facc15] font-sync text-xl mb-6 italic tracking-tighter">Pizzeria Anas</h5>
         <div class="text-[9px] text-zinc-600 font-bold uppercase tracking-widest leading-loose">
             <p>© 2015 - 2026 PIZZERIA ANAS</p>
             <p>ANAS SRLS | P.IVA 13411031006</p>
