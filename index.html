@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIZZERIA ANAS | La Resistenza Artigianale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --fumo: #0a0a0a; --neon: #facc15; --passione: #e11d48; }
+        body { background-color: var(--fumo); color: #ffffff; font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4, .font-sync { font-family: 'Syncopate', sans-serif; text-transform: uppercase; }
+        .brutal-border { border: 3px solid var(--neon); }
+        .brutal-shadow { box-shadow: 8px 8px 0px var(--passione); }
+        .brutal-shadow-neon { box-shadow: 5px 5px 0px var(--neon); }
+        
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .animate-reviews { display: flex; width: max-content; animation: scroll 40s linear infinite; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+        .allergen-tag { font-size: 0.6rem; color: var(--passione); font-weight: bold; text-transform: uppercase; margin-top: 5px; border-top: 1px solid #333; padding-top: 2px; display: block; }
+        
+        .btn-call-float { position: fixed; bottom: 20px; right: 20px; z-index: 99; background-color: var(--passione); color: white; padding: 15px 25px; font-weight: bold; border: 3px solid white; box-shadow: 5px 5px 0px var(--neon); text-transform: uppercase; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-[#facc15] text-black p-4 z-[101] border-t-4 border-black translate-y-full transition-transform duration-500 font-bold uppercase text-xs">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p>Accettando i cookie potrai visualizzare la mappa interattiva e i font premium.</p>
+            <button onclick="acceptCookies()" class="bg-black text-white px-6 py-2 brutal-shadow">ACCETTO</button>
+        </div>
+    </div>
+
+    <a href="tel:0670451243" class="btn-call-float md:hidden">📞 CHIAMA ORA</a>
+
+    <header class="sticky top-0 z-50 bg-[#0a0a0a] border-b-4 border-[#facc15] p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl md:text-2xl font-bold text-[#facc15] italic">PIZZERIA ANAS</h1>
+            <nav class="hidden md:flex items-center gap-6 text-[10px] font-bold uppercase">
+                <a href="#menu" class="hover:text-[#e11d48]">Menu</a>
+                <a href="#confronto" class="hover:text-[#e11d48]">Perché noi</a>
+                <a href="#dove" class="hover:text-[#e11d48]">Dove Siamo</a>
+                <a href="tel:0670451243" class="bg-[#e11d48] text-white px-4 py-2 brutal-shadow-neon italic">ORDINA ORA</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="py-12 bg-zinc-900 border-b-2 border-zinc-800 overflow-hidden">
+        <div class="animate-reviews flex items-center">
+            <div class="bg-black p-6 w-[300px] mx-4 border-2 border-zinc-800">
+                <p class="text-xs italic text-zinc-300">"La miglior pizza di Massimina! Impasto leggero e ingredienti sempre freschi."</p>
+                <span class="text-[#facc15] font-bold text-[10px] block mt-2">- MARCO R.</span>
+            </div>
+            <div class="bg-black p-6 w-[300px] mx-4 border-2 border-zinc-800">
+                <p class="text-xs italic text-zinc-300">"Supplì spettacolari, croccanti e con tanto cuore di mozzarella."</p>
+                <span class="text-[#facc15] font-bold text-[10px] block mt-2">- ELENA V.</span>
+            </div>
+            <div class="bg-black p-6 w-[300px] mx-4 border-2 border-zinc-800">
+                <p class="text-xs italic text-zinc-300">"Locale pulito e personale gentilissimo. Una certezza dal 2015."</p>
+                <span class="text-[#facc15] font-bold text-[10px] block mt-2">- LUCA M.</span>
+            </div>
+            <div class="bg-black p-6 w-[300px] mx-4 border-2 border-zinc-800">
+                <p class="text-xs italic text-zinc-300">"La miglior pizza di Massimina! Impasto leggero e ingredienti sempre freschi."</p>
+                <span class="text-[#facc15] font-bold text-[10px] block mt-2">- MARCO R.</span>
+            </div>
+            <div class="bg-black p-6 w-[300px] mx-4 border-2 border-zinc-800">
+                <p class="text-xs italic text-zinc-300">"Supplì spettacolari, croccanti e con tanto cuore di mozzarella."</p>
+                <span class="text-[#facc15] font-bold text-[10px] block mt-2">- ELENA V.</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="confronto" class="py-20 px-4 bg-black">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 italic text-[#facc15]">ANAS VS INDUSTRIALE</h2>
+            <div class="grid md:grid-cols-2 gap-0 border-4 border-[#facc15] brutal-shadow">
+                <div class="p-8 bg-zinc-900 border-b-4 md:border-b-0 md:border-r-4 border-[#facc15]">
+                    <h4 class="text-zinc-500 font-bold mb-6 text-xl">PIZZERIE STANDARD</h4>
+                    <ul class="space-y-4 text-zinc-500 text-sm font-bold">
+                        <li>❌ Farine raffinate di bassa qualità</li>
+                        <li>❌ Lievitazioni flash (gonfiore addominale)</li>
+                        <li>❌ Ingredienti di sottomarca</li>
+                        <li>❌ Ambiente rumoroso e poco curato</li>
+                    </ul>
+                </div>
+                <div class="p-8 bg-black">
+                    <h4 class="text-[#facc15] font-bold mb-6 text-xl">LA NOSTRA RESISTENZA</h4>
+                    <ul class="space-y-4 text-white text-sm font-bold">
+                        <li>✅ Solo pomodoro 100% Italiano</li>
+                        <li>✅ Lunga lievitazione (Alta digeribilità)</li>
+                        <li>✅ Materie prime da filiera controllata</li>
+                        <li>✅ Ambiente sano (No Fumo) e Protetto</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-20 px-4">
+        <div class="container mx-auto">
+            <h3 class="text-3xl font-bold mb-12 text-center italic text-[#facc15]">I PIÙ FAMOSI</h3>
+            
+            <div class="menu-grid mb-16">
+                <div class="p-6 border border-zinc-800 hover:border-[#facc15] bg-zinc-900/30 transition-all">
+                    <div class="flex justify-between font-bold text-lg mb-2"><span>MARGHERITA</span><span>€ 6,00</span></div>
+                    <p class="text-xs text-zinc-400 italic">Pomodoro, mozzarella e basilico. La base della nostra arte.</p>
+                    <span class="allergen-tag">Glutine, Latte</span>
+                </div>
+                <div class="p-6 border border-zinc-800 hover:border-[#facc15] bg-zinc-900/30">
+                    <div class="flex justify-between font-bold text-lg mb-2"><span>DIAVOLA 🔥</span><span>€ 7,00</span></div>
+                    <p class="text-xs text-zinc-400 italic">Pomodoro, mozzarella e salame piccante di prima scelta.</p>
+                    <span class="allergen-tag">Glutine, Latte</span>
+                </div>
+                <div class="p-6 border border-zinc-800 hover:border-[#facc15] bg-zinc-900/30">
+                    <div class="flex justify-between font-bold text-lg mb-2"><span>SUPPLÌ CLASSICO</span><span>€ 1,00</span></div>
+                    <p class="text-xs text-zinc-400 italic">Il fritto romano per eccellenza. Riso al ragù e cuore filante.</p>
+                    <span class="allergen-tag">Glutine, Latte, Sedano</span>
+                </div>
+                <div class="p-6 border border-zinc-800 hover:border-[#facc15] bg-zinc-900/30">
+                    <div class="flex justify-between font-bold text-lg mb-2"><span>PIZZA ALLA PALA</span><span>€ 13,00</span></div>
+                    <p class="text-xs text-zinc-400 italic">Pala intera (3 gusti a scelta). Perfetta da condividere.</p>
+                    <span class="allergen-tag">Glutine, Latte</span>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="https://www.leggimenu.it/menu/pizzeria-anas?v=807534" target="_blank" class="inline-block bg-[#facc15] text-black font-bold px-10 py-5 brutal-shadow uppercase italic hover:scale-105 transition-all">
+                    👉 VEDI TUTTO IL MENU (PIÙ DI 50 ARTICOLI)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="dove" class="py-20 px-4 bg-zinc-900 border-y-4 border-[#facc15]">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <h3 class="text-3xl font-bold italic mb-6">DOVE SIAMO</h3>
+                    <p class="text-xl font-bold text-[#facc15] mb-2 uppercase">Via della Massimilla 80, Roma</p>
+                    <p class="text-sm text-zinc-400 mb-8 font-bold uppercase italic">Massimina - 00166 (RM)</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 text-[10px] font-bold uppercase">
+                        <div class="p-3 border border-zinc-700">🚫 VIETATO FUMARE</div>
+                        <div class="p-3 border border-zinc-700">💵 SOLO CONTANTI</div>
+                        <div class="p-3 border border-[#e11d48] text-[#e11d48] col-span-2 text-center">🛡️ AREA VIDEOSORVEGLIATA</div>
+                    </div>
+                    
+                    <a href="tel:0670451243" class="mt-8 block text-2xl font-bold text-center p-4 bg-white text-black hover:bg-[#facc15] transition-colors">
+                        📞 06 7045 1243
+                    </a>
+                </div>
+                
+                <div class="reveal brutal-border h-[400px] bg-black">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        marginheight="0" 
+                        marginwidth="0" 
+                        src="https://maps.google.com/maps?q=Via%20della%20Massimilla%2080,%20Roma&t=&z=16&ie=UTF8&iwloc=&output=embed">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 bg-black text-center border-t-2 border-zinc-800">
+        <h5 class="text-[#facc15] font-sync text-xl mb-6 italic">Pizzeria Anas</h5>
+        <div class="text-[9px] text-zinc-600 font-bold uppercase tracking-widest leading-loose">
+            <p>© 2015 - 2026 PIZZERIA ANAS</p>
+            <p>ANAS SRLS | P.IVA 13411031006</p>
+            <p>Artigianalità e Passione a Massimina</p>
+        </div>
+    </footer>
+
+    <script>
+        const banner = document.getElementById('cookie-banner');
+        function acceptCookies() { 
+            localStorage.setItem('anas_cookies_accepted', 'true'); 
+            banner.style.transform = 'translateY(100%)'; 
+        }
+        window.onload = () => { 
+            if (!localStorage.getItem('anas_cookies_accepted')) {
+                setTimeout(() => banner.style.transform = 'translateY(0)', 1500);
+            }
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
