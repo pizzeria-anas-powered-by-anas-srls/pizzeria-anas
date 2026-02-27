@@ -27,6 +27,10 @@
         .btn-call-float { position: fixed; bottom: 20px; right: 20px; z-index: 99; background-color: var(--passione); color: white; padding: 15px 25px; font-weight: bold; border: 3px solid white; box-shadow: 5px 5px 0px var(--neon); text-transform: uppercase; border-radius: 0; }
         .social-btn { transition: all 0.3s ease; border: 2px solid #333; }
         .social-btn:hover { border-color: var(--neon); transform: translateY(-3px); }
+
+        /* Stile aggiuntivo per sezione Regolamento */
+        .regola-box { border-left: 4px solid var(--passione); padding-left: 1rem; margin-bottom: 1.5rem; }
+        .regola-num { color: var(--neon); font-weight: bold; font-size: 0.7rem; display: block; margin-bottom: 2px; }
     </style>
 </head>
 <body class="antialiased">
@@ -45,6 +49,7 @@
             <h1 class="text-xl md:text-2xl font-bold text-[#facc15] italic tracking-tighter">PIZZERIA ANAS</h1>
             <nav class="hidden md:flex items-center gap-6 text-[10px] font-bold uppercase">
                 <a href="#menu" class="hover:text-[#e11d48]">Menu</a>
+                <a href="#regolamento" class="hover:text-[#e11d48]">Regolamento</a>
                 <a href="#confronto" class="hover:text-[#e11d48]">Perché noi</a>
                 <a href="#social" class="hover:text-[#e11d48]">Social</a>
                 <a href="tel:0670451243" class="bg-[#e11d48] text-white px-4 py-2 brutal-shadow-neon italic">ORDINA ORA</a>
@@ -65,10 +70,6 @@
             <div class="bg-black p-6 w-[300px] mx-4 border-2 border-zinc-800">
                 <p class="text-xs italic text-zinc-300">"Locale pulito e personale gentilissimo. Una certezza dal 2015."</p>
                 <span class="text-[#facc15] font-bold text-[10px] block mt-2">- LUCA M.</span>
-            </div>
-            <div class="bg-black p-6 w-[300px] mx-4 border-2 border-zinc-800">
-                <p class="text-xs italic text-zinc-300">"La miglior pizza di Massimina! Impasto leggero e ingredienti sempre freschi."</p>
-                <span class="text-[#facc15] font-bold text-[10px] block mt-2">- MARCO R.</span>
             </div>
         </div>
     </section>
@@ -132,6 +133,39 @@
         </div>
     </section>
 
+    <section id="regolamento" class="py-20 px-4 bg-zinc-900">
+        <div class="container mx-auto max-w-4xl">
+            <div class="bg-black p-8 brutal-border brutal-shadow">
+                <h3 class="text-2xl font-bold mb-6 italic text-[#e11d48]">REGOLAMENTO DI POLIZIA INTERNA</h3>
+                <p class="text-[10px] font-bold text-white mb-10 bg-[#e11d48] inline-block px-2 py-1 uppercase">Denunce alle autorità competenti senza preavviso per i trasgressori</p>
+                
+                <div class="grid md:grid-cols-2 gap-x-10 text-[11px] font-bold uppercase tracking-tighter">
+                    <div class="regola-box">
+                        <span class="regola-num">ART. 1 - ACCESSO</span>Ingresso e sosta riservati esclusivamente ai clienti paganti muniti di scontrino.
+                    </div>
+                    <div class="regola-box">
+                        <span class="regola-num">ART. 2 - ARREDI</span>Vietato spostare o occupare tavoli e sedie fuori servizio o impilati.
+                    </div>
+                    <div class="regola-box">
+                        <span class="regola-num">ART. 3 - ORDINE</span>Vietati schiamazzi e musica. I disturbatori verranno allontanati immediatamente.
+                    </div>
+                    <div class="regola-box">
+                        <span class="regola-num">ART. 4 - NO FUMO</span>Divieto assoluto di fumo e svapo in tutta la proprietà (interno ed esterno).
+                    </div>
+                    <div class="regola-box">
+                        <span class="regola-num">ART. 5 - ENERGIA</span>Vietato ricaricare cellulari o PC dalle prese. Il fatto costituisce furto.
+                    </div>
+                    <div class="regola-box">
+                        <span class="regola-num">ART. 6 - VIGILANZA</span>Area monitorata h24. Le immagini saranno usate come prova legale.
+                    </div>
+                    <div class="regola-box">
+                        <span class="regola-num">ART. 7 - RIFIUTI</span>Obbligatorio usare solo i cestini interni. **ASSOLUTAMENTE VIETATO** gettare rifiuti nei È fatto assoluto divieto di conferire rifiuti nei mastelli **AMA** situati all'interno della **proprietà privata** (colori: **BLU, GIALLO, VERDE, MARRONE, GRIGIO**).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="social" class="py-20 px-4 bg-black border-y-2 border-zinc-800">
         <div class="container mx-auto text-center">
             <h3 class="text-2xl font-bold mb-10 italic text-[#facc15]">SOCIAL & RECENSIONI</h3>
@@ -168,14 +202,14 @@
         <div class="container mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="reveal">
-                    <h3 class="text-3xl font-bold italic mb-6">DOVE SIAMO</h3>
+                    <h3 class="text-3xl font-bold italic mb-6 uppercase">Dove Siamo</h3>
                     <p class="text-xl font-bold text-[#facc15] mb-2 uppercase">Via della Massimilla 80, Roma</p>
                     <p class="text-sm text-zinc-400 mb-8 font-bold uppercase italic">Massimina - 00166 (RM)</p>
                     
                     <div class="grid grid-cols-2 gap-4 text-[10px] font-bold uppercase">
-                        <div class="p-3 border border-zinc-700">🚫 VIETATO FUMARE</div>
-                        <div class="p-3 border border-zinc-700">💵 SOLO CONTANTI</div>
-                        <div class="p-3 border border-[#e11d48] text-[#e11d48] col-span-2 text-center">🛡️ AREA VIDEOSORVEGLIATA</div>
+                        <div class="p-3 border border-zinc-700 text-center">🚫 VIETATO FUMARE</div>
+                        <div class="p-3 border border-zinc-700 text-center text-[#facc15]">💵 SOLO CONTANTI</div>
+                        <div class="p-3 border border-[#e11d48] text-[#e11d48] col-span-2 text-center italic uppercase">🛡️ AREA VIDEOSORVEGLIATA</div>
                     </div>
                     
                     <a href="tel:0670451243" class="mt-8 block text-2xl font-bold text-center p-4 bg-white text-black hover:bg-[#facc15] transition-colors border-4 border-black">
@@ -199,7 +233,7 @@
     </section>
 
     <footer class="py-16 bg-black text-center border-t-2 border-zinc-800">
-        <h5 class="text-[#facc15] font-sync text-xl mb-6 italic tracking-tighter">Pizzeria Anas</h5>
+        <h5 class="text-[#facc15] font-sync text-xl mb-6 italic tracking-tighter uppercase">Pizzeria Anas</h5>
         <div class="text-[9px] text-zinc-600 font-bold uppercase tracking-widest leading-loose">
             <p>© 2015 - 2026 PIZZERIA ANAS</p>
             <p>ANAS SRLS | P.IVA 13411031006</p>
