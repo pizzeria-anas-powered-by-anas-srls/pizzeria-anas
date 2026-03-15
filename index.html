@@ -53,23 +53,74 @@
         </div>
     </header>
 
-    <section id="premi" class="py-16 bg-black border-b border-zinc-800 text-center">
-        <div class="container mx-auto">
-            <h3 class="text-[#facc15] text-xl font-bold mb-10 italic uppercase tracking-[0.2em]">ECCELLENZE</h3>
-            <div class="flex flex-wrap justify-center items-center gap-8">
+        <section id="premi" class="py-16 bg-black border-b border-zinc-800 text-center">
+        <div class="container mx-auto px-4">
+            <h3 class="text-[#facc15] text-xl font-bold mb-10 italic uppercase tracking-[0.2em] font-sync">ECCELLENZE</h3>
+            
+            <div class="flex flex-wrap justify-center items-center gap-10">
+                
+                <!-- WIDGET 1: TRIPADVISOR -->
                 <div class="ta-wrapper brutal-shadow-neon">
-                    <div id="TA_restaurantWidgetWhite812" class="TA_restaurantWidgetWhite"><ul id="j0TyEVBPC" class="TA_links qjlwaUys0QDD"><li id="zNciCoJTVgz" class="bEicDm4M"><a target="_blank" href="https://www.tripadvisor.it/Restaurant_Review-g12946238-d33095805-Reviews-Pizzeria_Anas-La_Massimina_Casal_Lumbroso_Province_of_Rome_Lazio.html"><img src="https://www.tripadvisor.it/img/cdsi/img2/branding/v2/Tripadvisor_lockup_horizontal_registered-24177-2.svg" alt="Tripadvisor" style="width:150px;"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=restaurantWidgetWhite&uniq=812&locationId=33095805&lang=it&display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+                    <div id="TA_restaurantWidgetWhite812" class="TA_restaurantWidgetWhite">
+                        <ul id="j0TyEVBPC" class="TA_links qjlwaUys0QDD">
+                            <li id="zNciCoJTVgz" class="bEicDm4M">
+                                <a target="_blank" href="https://www.tripadvisor.it">
+                                    <img src="https://www.tripadvisor.it" alt="Tripadvisor" style="width:150px;"/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <script async src="https://www.jscache.com"></script>
                 </div>
+
+                <!-- WIDGET 2: RESTAURANT GURU - MIGLIOR RISTORANTE (NUOVO) -->
+                <div id="circle-r-ribbon" onclick="if(event.target.nodeName.toLowerCase() != 'a') {window.open(this.querySelector('.r-ribbon_title').href);return 0;}" class="cursor-pointer"> 
+                    <div class="r-ribbon_ahead "> 
+                        <svg width="160" height="160" viewBox="0 0 160 160"> 
+                            <defs><path id="heading-arc-new" d="M 30 80 a 50 50 0 1 1 100 0"></path></defs> 
+                            <text class="r-ribbon_ahead-heading f9" fill="#000" text-anchor="middle">
+                                <textPath startOffset="50%" xlink:href="#heading-arc-new">Miglior ristorante</textPath>
+                            </text> 
+                        </svg> 
+                    </div> 
+                    <p class="r-ribbon_year">2025</p> 
+                    <a href="https://restaurantguru.it/Pizzeria-Anas-La-Massimina-Casal-Lumbroso" class="r-ribbon_title" target="_blank">Pizzeria Anas</a> 
+                    <div class="r-ribbon_ahead r-ribbon_ahead-bottom"> 
+                        <svg width="120" height="120" viewBox="0 0 120 120"> 
+                            <defs><path id="subheading-arc-new" d="M 12 60 a 48 48 0 0 0 96 0"></path></defs> 
+                            <text class="r-ribbon_ahead-subh" fill="#000" text-anchor="middle">
+                                <textPath startOffset="50%" xlink:href="#subheading-arc-new">Restaurant Guru</textPath>
+                            </text>
+                        </svg> 
+                    </div> 
+                </div>
+
+                <!-- WIDGET 3: RESTAURANT GURU - MIGLIOR TAKEAWAY -->
                 <div id="circle-r-ribbon"> 
-                    <div class="r-ribbon_ahead "> <svg width="160" height="160" viewBox="0 0 160 160"> <defs><path id="h1" d="M 30 80 a 50 50 0 1 1 100 0"></path></defs> <text class="r-ribbon_ahead-heading f12" fill="#000" text-anchor="middle"><textPath startOffset="50%" xlink:href="#h1">Best restaurant</textPath></text></svg> </div> <p class="r-ribbon_year">2025</p> <a href="https://restaurantguru.com/Pizzeria-Anas-La-Massimina-Casal-Lumbroso" class="r-ribbon_title" target="_blank">Pizzeria Anas</a> <div class="r-ribbon_ahead r-ribbon_ahead-bottom"> <svg width="120" height="120" viewBox="0 0 120 120"> <defs><path id="s1" d="M 12 60 a 48 48 0 0 0 96 0"></path></defs> <text class="r-ribbon_ahead-subh" fill="#000" text-anchor="middle"><textPath startOffset="50%" xlink:href="#s1">Restaurant Guru</textPath></text></svg> </div>
+                    <div class="r-ribbon_ahead "> 
+                        <svg width="160" height="160" viewBox="0 0 160 160"> 
+                            <defs><path id="h2" d="M 30 80 a 50 50 0 1 1 100 0"></path></defs> 
+                            <text class="r-ribbon_ahead-heading f12" fill="#000" text-anchor="middle">
+                                <textPath startOffset="50%" xlink:href="#h2">Miglior takeaway</textPath>
+                            </text>
+                        </svg> 
+                    </div> 
+                    <p class="r-ribbon_year">2025</p> 
+                    <a href="https://restaurantguru.it/Pizzeria-Anas-La-Massimina-Casal-Lumbroso" class="r-ribbon_title" target="_blank">Pizzeria Anas</a> 
+                    <div class="r-ribbon_ahead r-ribbon_ahead-bottom"> 
+                        <svg width="120" height="120" viewBox="0 0 120 120"> 
+                            <defs><path id="s2" d="M 12 60 a 48 48 0 0 0 96 0"></path></defs> 
+                            <text class="r-ribbon_ahead-subh" fill="#000" text-anchor="middle">
+                                <textPath startOffset="50%" xlink:href="#s2">Restaurant Guru</textPath>
+                            </text>
+                        </svg> 
+                    </div> 
                 </div>
-                <div id="circle-r-ribbon"> 
-                    <div class="r-ribbon_ahead "> <svg width="160" height="160" viewBox="0 0 160 160"> <defs><path id="h2" d="M 30 80 a 50 50 0 1 1 100 0"></path></defs> <text class="r-ribbon_ahead-heading f12" fill="#000" text-anchor="middle"><textPath startOffset="50%" xlink:href="#h2">Miglior takeaway</textPath></text></svg> </div> <p class="r-ribbon_year">2025</p> <a href="https://restaurantguru.it/Pizzeria-Anas-La-Massimina-Casal-Lumbroso" class="r-ribbon_title" target="_blank">Pizzeria Anas</a> <div class="r-ribbon_ahead r-ribbon_ahead-bottom"> <svg width="120" height="120" viewBox="0 0 120 120"> <defs><path id="s2" d="M 12 60 a 48 48 0 0 0 96 0"></path></defs> <text class="r-ribbon_ahead-subh" fill="#000" text-anchor="middle"><textPath startOffset="50%" xlink:href="#s2">Restaurant Guru</textPath></text></svg> </div>
-                </div>
+
             </div>
         </div>
-    </section>
-
+        </section>
+    
     <section id="social" class="py-20 px-4 bg-zinc-950">
         <div class="container mx-auto">
             <h3 class="text-3xl font-bold mb-12 text-center italic text-[#facc15]">SOCIAL & RECENSIONI</h3>
