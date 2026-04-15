@@ -26,9 +26,15 @@
         .platform-card { transition: all 0.3s ease; border: 2px solid #222; background: #0f0f0f; display: flex; flex-direction: column; justify-content: center; height: 100px; text-decoration: none; }
         .platform-card:hover { border-color: var(--neon); transform: translateY(-5px); }
         
+        /* Stile specifico per il contenitore TripAdvisor */
         .ta-wrapper { background: white; padding: 15px; border-radius: 8px; display: inline-block; border: 4px solid var(--neon); }
+        
+        /* Correzione per la dimensione dei cerchi premi su mobile */
+        #circle_bw { transform: scale(0.8); transition: transform 0.3s; }
+        #circle_bw:hover { transform: scale(0.9); }
     </style>
 </head>
+
 <body class="antialiased">
 
     <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-[#facc15] text-black p-4 z-[101] border-t-4 border-black translate-y-0 transition-transform duration-500 font-bold uppercase text-xs">
