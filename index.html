@@ -59,16 +59,41 @@
         </div>
     </div>
 
-    <header class="sticky top-0 z-50 bg-[#1a1a1a] border-b-4 border-[#5d4037] p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold text-[#b71c1c] italic font-sync">PIZZERIA ANAS</h1>
-            <nav class="hidden md:flex gap-6 text-[10px] font-bold uppercase">
-                <a href="#menu" class="hover:text-[#b71c1c]">Menu</a>
-                <a href="#premi" class="hover:text-[#b71c1c]">Eccellenze</a>
-                <a href="#social" class="hover:text-[#b71c1c]">Social</a>
-                <a href="#regolamento" class="hover:text-[#b71c1c]">Norme</a>
-                <a href="tel:0670451243" class="bg-[#b71c1c] px-4 py-2 border-2 border-white italic">ORDINA</a>
-            </nav>
+<header class="sticky top-0 z-[100] w-full">
+        <div class="bg-[#b71c1c] text-white text-[8px] font-black uppercase tracking-[0.4em] py-1 text-center border-b border-white">
+            Roma • Via della Massimilla 80 • Qualità Superiore Garantita • 2026
+        </div>
+        
+        <div class="bg-[#1a1a1a]/90 backdrop-blur-md border-b-4 border-[#5d4037] p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="#" class="group">
+                    <h1 class="text-xl md:text-2xl font-bold text-[#b71c1c] italic font-sync leading-none group-hover:text-white transition-colors">
+                        PIZZERIA <span class="text-white group-hover:text-[#b71c1c]">ANAS</span>
+                    </h1>
+                    <p class="text-[7px] text-zinc-500 font-bold tracking-[0.2em] -mt-1">RESISTENZA ARTIGIANALE</p>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-8 text-[10px] font-black uppercase tracking-widest">
+                    <a href="#menu" class="relative hover:text-[#b71c1c] transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#b71c1c] hover:after:w-full after:transition-all">Menu</a>
+                    <a href="#premi" class="relative hover:text-[#b71c1c] transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#b71c1c] hover:after:w-full after:transition-all">Eccellenze</a>
+                    <a href="#social" class="relative hover:text-[#b71c1c] transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#b71c1c] hover:after:w-full after:transition-all">Social</a>
+                    <a href="#dove" class="relative hover:text-[#b71c1c] transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#b71c1c] hover:after:w-full after:transition-all">Contatti</a>
+                    <a href="#regolamento" class="relative hover:text-[#b71c1c] transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#b71c1c] hover:after:w-full after:transition-all">Norme</a>
+                    
+                    <a href="tel:0670451243" class="relative inline-block group">
+                        <span class="absolute inset-0 bg-white translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform"></span>
+                        <span class="relative bg-[#b71c1c] text-white px-6 py-2 border-2 border-black font-black italic block group-hover:bg-white group-hover:text-[#b71c1c] transition-colors">
+                            ORDINA ORA
+                        </span>
+                    </a>
+                </nav>
+
+                <div class="md:hidden text-[#b71c1c]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 8h16M4 16h16" />
+                    </svg>
+                </div>
+            </div>
         </div>
     </header>
 
