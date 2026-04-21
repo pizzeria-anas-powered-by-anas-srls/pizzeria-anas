@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIZZERIA ANAS | Sito Ufficiale 2026</title>
+    <title>PIZZERIA ANAS | Sito Ufficiale</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,13 +65,14 @@
     </div>
 </div>
 
-    <header class="sticky top-0 z-[100] w-full">
+<header class="sticky top-0 z-[100] w-full">
         <div class="bg-[#b71c1c] text-white text-[8px] font-black uppercase tracking-[0.4em] py-1 text-center border-b border-white">
             Roma • Via della Massimilla 80 • Qualità Superiore Garantita • 2026
         </div>
         
         <div class="bg-[#1a1a1a]/90 backdrop-blur-md border-b-4 border-[#5d4037] p-4">
             <div class="container mx-auto flex justify-between items-center">
+                
                 <a href="#" class="group">
                     <h1 class="text-xl md:text-2xl font-bold text-[#b71c1c] italic font-sync leading-none group-hover:text-white transition-colors">
                         PIZZERIA <span class="text-white group-hover:text-[#b71c1c]">ANAS</span>
@@ -79,20 +80,28 @@
                     <p class="text-[7px] text-zinc-500 font-bold tracking-[0.2em] -mt-1">RESISTENZA ARTIGIANALE</p>
                 </a>
 
-                <nav class="hidden md:flex items-center gap-8 text-[10px] font-black uppercase tracking-widest">
+                <nav class="hidden md:flex items-center gap-6 text-[10px] font-black uppercase tracking-widest">
                     <a href="#teoria-tempo" class="hover:text-[#b71c1c] transition-colors">Metodo</a>
-                    <a href="#premi" class="hover:text-[#b71c1c] transition-colors">Eccellenze</a>
-                    <a href="#social" class="hover:text-[#b71c1c] transition-colors">Social</a>
-                    <a href="#dove" class="hover:text-[#b71c1c] transition-colors">Contatti</a>
-                    <a href="#regolamento" class="hover:text-[#b71c1c] transition-colors">Norme</a>
                     
-                    <a href="tel:0670451243" class="relative inline-block group">
+                    <a href="#menu" class="text-white bg-[#b71c1c] px-2 py-1 border border-white hover:bg-white hover:text-[#b71c1c] transition-all">
+                        Lista_Operativa
+                    </a>
+
+                    <a href="#premi" class="hover:text-[#b71c1c] transition-colors">Eccellenze</a>
+                    <a href="#dove" class="hover:text-[#b71c1c] transition-colors">Contatti</a>
+                    <a href="#regolamento" class="hover:text-[#b71c1c] transition-colors opacity-50">Norme</a>
+                    
+                    <a href="tel:0670451243" class="relative inline-block group ml-4">
                         <span class="absolute inset-0 bg-white translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform"></span>
                         <span class="relative bg-[#b71c1c] text-white px-6 py-2 border-2 border-black font-black italic block group-hover:bg-white group-hover:text-[#b71c1c] transition-colors">
-                            ORDINA ORA
+                            CHIAMA ORA
                         </span>
                     </a>
                 </nav>
+
+                <div class="md:hidden text-[#b71c1c] font-black text-[10px]">
+                    <a href="#menu">[MENU]</a>
+                </div>
             </div>
         </div>
     </header>
@@ -151,6 +160,58 @@
 
     </div>
 </section>
+<section id="menu" class="py-20 bg-[#1a1a1a] text-center border-t border-[#333]">
+        <h3 class="text-3xl font-bold mb-12 font-sync text-[#b71c1c]">I PIÙ FAMOSI</h3>
+        <div class="container mx-auto px-4 max-w-6xl grid md:grid-cols-3 gap-8 mb-12">
+            
+            <div class="p-6 card-legno brutal-shadow-red text-left">
+                <div class="flex justify-between items-start font-bold text-lg">
+                    <span>MARGHERITA</span>
+                    <span class="text-white">€ 6,00</span>
+                </div>
+                <p class="text-[10px] uppercase text-zinc-400 mt-4 leading-relaxed">
+                    La regina delle pizze: pomodoro italiano, mozzarella filante e basilico fresco.
+                </p>
+                <div class="mt-4 pt-2 border-t border-zinc-800">
+                    <span class="text-[8px] text-[#b71c1c] font-bold uppercase tracking-widest">Allergeni: Glutine, Latte</span>
+                </div>
+            </div>
+
+            <div class="p-6 card-legno brutal-shadow-red text-left border-[#b71c1c]">
+                <div class="flex justify-between items-start font-bold text-lg text-[#b71c1c]">
+                    <span>PACHINO E BUFALA</span>
+                    <span>€ 8,00</span>
+                </div>
+                <p class="text-[10px] uppercase text-zinc-400 mt-4 leading-relaxed">
+                    Freschezza mediterranea: mozzarella di bufala DOP e pomodorini pachino dolci.
+                </p>
+                <div class="mt-4 pt-2 border-t border-zinc-800">
+                    <span class="text-[8px] text-[#b71c1c] font-bold uppercase tracking-widest">Allergeni: Glutine, Latte</span>
+                </div>
+            </div>
+
+            <div class="p-6 card-legno brutal-shadow-red text-left">
+                <div class="flex justify-between items-start font-bold text-lg">
+                    <span>SUPPLÌ CLASSICO</span>
+                    <span class="text-white">€ 1,00</span>
+                </div>
+                <p class="text-[10px] uppercase text-zinc-400 mt-4 leading-relaxed">
+                    Il cuore di Roma: riso al ragù e cuore di mozzarella filante.
+                </p>
+                <div class="mt-4 pt-2 border-t border-zinc-800">
+                    <span class="text-[8px] text-[#b71c1c] font-bold uppercase tracking-widest">Allergeni: Glutine, Latte, Sedano</span>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="flex flex-col items-center gap-4">
+            <a href="https://www.leggimenu.it/menu/pizzeria-anas?v=807534" target="_blank" class="inline-block bg-[#b71c1c] text-white font-black px-12 py-5 border-4 border-white uppercase italic hover:bg-white hover:text-black transition-all">
+                👉 SCOPRI TUTTE LE PIZZE E I FRITTI
+            </a>
+            <p class="text-[9px] text-zinc-500 font-sync uppercase opacity-50">Ultimo aggiornamento listino: 14-02-2026</p>
+        </div>
+    </section>
 <section id="kit-sopravvivenza" style="background-color: #000; padding: 80px 20px; color: #fff; font-family: 'Courier New', Courier, monospace;">
     
     <div style="max-width: 900px; margin: 0 auto; border: 4px dashed #ff4500; padding: 40px; position: relative;">
@@ -515,34 +576,48 @@
         </div>
     </section>
 
-    <footer class="bg-black border-t-4 border-[#5d4037] pt-16 pb-12 px-6">
-        <div class="container mx-auto text-center md:text-left">
-            <h2 class="text-[#b71c1c] font-sync text-2xl italic mb-2">PIZZERIA ANAS</h2>
-            <p class="text-white font-bold uppercase mb-6 tracking-widest italic opacity-80">Resistenza Artigianale</p>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 text-[10px] text-zinc-500 uppercase tracking-widest border-t border-zinc-900 pt-10">
+<footer class="bg-black border-t-4 border-[#5d4037] pt-16 pb-12 px-6">
+    <div class="container mx-auto text-center md:text-left">
+        <h2 class="text-[#b71c1c] font-sync text-2xl italic mb-2">PIZZERIA ANAS</h2>
+        <p class="text-white font-bold uppercase mb-6 tracking-widest italic opacity-80">Resistenza Artigianale</p>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 text-[10px] text-zinc-500 uppercase tracking-widest border-t border-zinc-900 pt-10">
+            <div>
+                <p class="text-[#b71c1c] mb-2 font-bold">📍 POSIZIONE</p>
+                <p class="text-zinc-300">Via della Massimilla 80, 00166 Roma (RM)</p>
+                
+                <p class="mt-4 text-[#b71c1c] mb-2 font-bold">📞 CONTATTI</p>
+                <p class="text-zinc-300">WhatsApp: <a href="https://wa.me/390670451243" class="hover:text-white">06 70451243</a></p>
+                <p class="text-zinc-300">Email: <a href="mailto:pizzeriaanas2015@gmail.com" class="hover:text-white">pizzeriaanas2015@gmail.com</a></p>
+            </div>
+
+            <div>
+                <p class="text-[#b71c1c] mb-2 font-bold">🏢 AZIENDA</p>
+                <p class="text-zinc-300">© 2015 - 2026 ANAS SRLS</p>
+                <p class="text-zinc-300">P.IVA: 13368421007 | REA: RM-1442493</p>
+                <p class="text-zinc-300">PEC: <a href="mailto:anassrls@pec.it" class="hover:text-white">anassrls@pec.it</a></p>
+                <p class="mt-4 italic opacity-50">Dipendenti: 3 (Dato 2025)</p>
+            </div>
+
+            <div class="lg:text-right flex flex-col justify-between">
                 <div>
-                    <p class="text-[#b71c1c] mb-2 font-bold">📍 POSIZIONE</p>
-                    <p class="text-zinc-300">Via della Massimilla 80, 00166 Roma (RM)</p>
-                    <p class="mt-4 text-[#b71c1c] mb-2 font-bold">📞 CONTATTI</p>
-                    <p class="text-zinc-300">WhatsApp: 06 70451243</p>
-                    <p class="text-zinc-300">Email: pizzeriaanas2015@gmail.com</p>
-                </div>
-                <div>
-                    <p class="text-[#b71c1c] mb-2 font-bold">🏢 AZIENDA</p>
-                    <p class="text-zinc-300">© 2015 - 2026 ANAS SRLS</p>
-                    <p class="text-zinc-300">P.IVA: 13368421007 | REA: RM-1442493</p>
-                    <p class="text-zinc-300">PEC: anassrls@pec.it</p>
-                    <p class="mt-4 italic">Dipendenti: 3 (2025)</p>
-                </div>
-                <div class="lg:text-right flex flex-col justify-end">
                     <p class="text-[#b71c1c] mb-2 font-bold">⚖️ SEDE LEGALE</p>
-                    <p class="text-zinc-300">Via Gregorio XI 10, 00166 Roma</p>
-                    <p class="mt-8 opacity-30 italic">©ANAS SRLS - SITO UFFICIALE 2026 - TUTTI I DIRITTI RISERVATI - POWERED BY GITHUB</p>
+                    <p class="text-zinc-300 uppercase">Via Gregorio XI 10, 00166 Roma</p>
+                </div>
+
+                <div id="google_translate_element" class="mt-4 inline-block"></div>
+
+                <div class="mt-8">
+                    <p class="opacity-30 italic leading-loose">
+                        ©ANAS SRLS - SITO UFFICIALE 2026 - TUTTI I DIRITTI RISERVATI<br>
+                        <a href="#cookie-banner" class="hover:underline">PRIVACY POLICY</a> • <a href="#" class="hover:underline">COOKIE POLICY</a><br>
+                        POWERED BY GITHUB // CODICE_SORGENTE_VERIFICATO
+                    </p>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
 </body>
 </html>
