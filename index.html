@@ -52,14 +52,20 @@
 </head>
 <body class="antialiased">
 
-    <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-[#b71c1c] text-white p-4 z-[101] border-t-4 border-white translate-y-0 transition-transform duration-500 font-bold uppercase text-[10px]">
-        <div class="container mx-auto flex justify-between items-center">
-            <p>Pizzeria Anas - Via della Massimilla 80, Roma. Sito Ufficiale 2026.</p>
-            <button onclick="document.getElementById('cookie-banner').style.transform='translateY(100%)'" class="bg-white text-black px-6 py-2 border-2 border-black font-black">CHIUDI</button>
-        </div>
+     <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-[#b71c1c] text-white p-4 z-[101] border-t-4 border-white font-bold uppercase text-[10px]">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-center md:text-left">
+            Utilizziamo cookie tecnici e di terze parti (Google Maps) per il corretto funzionamento del sito. 
+            Navigando accetti il nostro protocollo.
+        </p>
+        <button onclick="document.getElementById('cookie-banner').remove()" 
+                class="bg-white text-black px-6 py-2 border-2 border-black font-black hover:bg-black hover:text-white transition-all whitespace-nowrap">
+            ACCETTA E CHIUDI
+        </button>
     </div>
+</div>
 
-<header class="sticky top-0 z-[100] w-full">
+    <header class="sticky top-0 z-[100] w-full">
         <div class="bg-[#b71c1c] text-white text-[8px] font-black uppercase tracking-[0.4em] py-1 text-center border-b border-white">
             Roma • Via della Massimilla 80 • Qualità Superiore Garantita • 2026
         </div>
@@ -74,11 +80,11 @@
                 </a>
 
                 <nav class="hidden md:flex items-center gap-8 text-[10px] font-black uppercase tracking-widest">
-                    <a href="#menu" class="relative hover:text-[#b71c1c] transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#b71c1c] hover:after:w-full after:transition-all">Menu</a>
-                    <a href="#premi" class="relative hover:text-[#b71c1c] transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#b71c1c] hover:after:w-full after:transition-all">Eccellenze</a>
-                    <a href="#social" class="relative hover:text-[#b71c1c] transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#b71c1c] hover:after:w-full after:transition-all">Social</a>
-                    <a href="#dove" class="relative hover:text-[#b71c1c] transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#b71c1c] hover:after:w-full after:transition-all">Contatti</a>
-                    <a href="#regolamento" class="relative hover:text-[#b71c1c] transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#b71c1c] hover:after:w-full after:transition-all">Norme</a>
+                    <a href="#teoria-tempo" class="hover:text-[#b71c1c] transition-colors">Metodo</a>
+                    <a href="#premi" class="hover:text-[#b71c1c] transition-colors">Eccellenze</a>
+                    <a href="#social" class="hover:text-[#b71c1c] transition-colors">Social</a>
+                    <a href="#dove" class="hover:text-[#b71c1c] transition-colors">Contatti</a>
+                    <a href="#regolamento" class="hover:text-[#b71c1c] transition-colors">Norme</a>
                     
                     <a href="tel:0670451243" class="relative inline-block group">
                         <span class="absolute inset-0 bg-white translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform"></span>
@@ -87,17 +93,198 @@
                         </span>
                     </a>
                 </nav>
-
-                <div class="md:hidden text-[#b71c1c]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 8h16M4 16h16" />
-                    </svg>
-                </div>
             </div>
         </div>
     </header>
+ <section class="py-24 bg-black text-white overflow-hidden relative border-y-4 border-[#b71c1c]">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h3 class="text-4xl md:text-6xl font-black mb-8 font-sync italic tracking-tighter">LA CUCINA È SACRA</h3>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <p class="text-xl md:text-2xl font-bold uppercase leading-tight">
+                    "Non vendiamo solo cibo. Difendiamo un'idea."
+                </p>
+                <div class="h-1 w-24 bg-[#b71c1c] mx-auto"></div>
+                <p class="text-xs md:text-sm tracking-[0.3em] uppercase opacity-70 leading-loose">
+                    In un mondo di pizze industriali e chef-influencer, noi scegliamo il silenzio. 
+                    Il nostro impasto matura nel buio, lontano da occhi estranei. 
+                    Non chiedete di vedere, chiedete di assaggiare. Questa è la nostra unica verità.
+                </p>
+                <p class="text-[10px] font-black text-[#b71c1c] mt-10 italic">DAL 2015, NESSUNA DEROGA AL METODO  DI PIZZERIA ANAS.</p>
+            </div>
+        </div>
+    </section>
+<section id="teoria-tempo" style="background-color: #000; padding: 60px 20px; color: #fff; font-family: 'Courier New', Courier, monospace;">
+    <div style="max-width: 900px; margin: 0 auto; border-left: 10px solid #fff; padding-left: 30px;">
+        
+        <h2 style="font-size: 3rem; font-weight: 900; text-transform: uppercase; margin-bottom: 40px; line-height: 0.9;">
+            TEORIA<br>DEL_TEMPO
+        </h2>
 
-    <section id="premi" class="py-16 bg-[#121212] text-center">
+        <div style="display: grid; gap: 40px;">
+            
+            <div>
+                <h3 style="background-color: #fff; color: #000; display: inline-block; padding: 5px 15px; font-size: 1.2rem;">72_ORE</h3>
+                <p style="margin-top: 15px; font-size: 1.1rem; line-height: 1.6; color: #bbb;">
+                    Maturazione lenta. Il tempo lavora l'impasto al posto nostro. 
+                    Scomposizione enzimatica completa per una leggerezza brutale.
+                </p>
+            </div>
+
+            <div>
+                <h3 style="background-color: #fff; color: #000; display: inline-block; padding: 5px 15px; font-size: 1.2rem;">90_SECONDI</h3>
+                <p style="margin-top: 15px; font-size: 1.1rem; line-height: 1.6; color: #bbb;">
+                    Il punto di non ritorno. Cottura a 450°C. 
+                    Precisione assoluta tra morbidezza e croccantezza.
+                </p>
+            </div>
+
+            <div>
+                <h3 style="background-color: #ff4500; color: #fff; display: inline-block; padding: 5px 15px; font-size: 1.2rem;">0_COMPROMESSI</h3>
+                <p style="margin-top: 15px; font-size: 1.1rem; line-height: 1.6; color: #888;">
+                    Il tempo da PIZZERIA ANAS è un parametro fisso, non una variabile. 
+                    Se non è il suo momento, la pizza non esce.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<section id="kit-sopravvivenza" style="background-color: #000; padding: 80px 20px; color: #fff; font-family: 'Courier New', Courier, monospace;">
+    
+    <div style="max-width: 900px; margin: 0 auto; border: 4px dashed #ff4500; padding: 40px; position: relative;">
+        
+        <div style="position: absolute; top: -20px; left: 20px; background-color: #ff4500; color: #fff; padding: 5px 20px; font-weight: 900; letter-spacing: 2px;">
+            EMERGENCY_ONLY
+        </div>
+
+        <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 30px; text-transform: uppercase;">
+           KIT DI SOPRAVVIVENZA
+        </h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+            
+            <div style="border: 2px solid #fff; padding: 20px; text-align: center;">
+                <span style="font-size: 2.5rem;">🍕</span>
+                <h4 style="margin: 10px 0; border-bottom: 1px solid #fff;">LA DOPPIA</h4>
+                <p style="font-size: 0.8rem; color: #888;">Due pizze per chi non sa se arriva a domani.</p>
+            </div>
+
+            <div style="border: 2px solid #fff; padding: 20px; text-align: center;">
+                <span style="font-size: 2.5rem;">🥤</span>
+                <h4 style="margin: 10px 0; border-bottom: 1px solid #fff;">IDRATAZIONE</h4>
+                <p style="font-size: 0.8rem; color: #888;">Bevanda fredda per abbassare la temperatura corporea.</p>
+            </div>
+
+            <div style="border: 2px solid #fff; padding: 20px; text-align: center;">
+                <span style="font-size: 2.5rem;">🌶️</span>
+                <h4 style="margin: 10px 0; border-bottom: 1px solid #fff;">ADRENALINA</h4>
+                <p style="font-size: 0.8rem; color: #888;">Olio piccante estratto a freddo. Risveglio dei sensi.</p>
+            </div>
+
+            <div style="border: 2px solid #fff; padding: 20px; text-align: center;">
+                <span style="font-size: 2.5rem;">📦</span>
+                <h4 style="margin: 10px 0; border-bottom: 1px solid #fff;">IL CARTONE</h4>
+                <p style="font-size: 0.8rem; color: #888;">Scudo termico per il trasporto rapido su Via della Massimilla.</p>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 40px; background-color: #111; padding: 20px; border-left: 5px solid #ff4500;">
+            <p style="margin: 0; font-size: 1.1rem; font-weight: bold;">
+                > ISTRUZIONI: Aprire la scatola. Consumare entro i primi 300 secondi per la massima croccantezza. Non condividere se non strettamente necessario.
+            </p>
+        </div>
+
+    </div>
+</section>
+<section id="no-delivery" style="background-color: #000; padding: 100px 20px; color: #fff; font-family: 'Courier New', Courier, monospace;">
+    
+    <div style="max-width: 800px; margin: 0 auto; border: 10px solid #fff; padding: 50px; background-color: #000; position: relative; overflow: hidden;">
+        
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-size: 8rem; font-weight: 900; color: rgba(255, 0, 0, 0.15); white-space: nowrap; pointer-events: none;">
+            NO_DELIVERY
+        </div>
+
+        <h2 style="font-size: 4rem; font-weight: 900; margin: 0; line-height: 0.8; text-transform: uppercase; color: #ff0000;">
+            ZERO<br>CORRIERI
+        </h2>
+
+        <div style="margin-top: 40px; border-top: 2px solid #fff; padding-top: 20px;">
+            <p style="font-size: 1.5rem; font-weight: 900; letter-spacing: -1px; text-transform: uppercase; margin-bottom: 20px;">
+                La qualità non viaggia in scooter.
+            </p>
+            
+            <ul style="list-style: none; padding: 0; font-size: 1.1rem; line-height: 1.8;">
+                <li style="margin-bottom: 15px;">
+                    <span style="background-color: #fff; color: #000; padding: 0 5px;">01</span> 
+                    <strong>L'UMIDITÀ È IL NEMICO:</strong> Il cartone chiuso uccide la croccantezza in 180 secondi.
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <span style="background-color: #fff; color: #000; padding: 0 5px;">02</span> 
+                    <strong>RISPETTO PER L'IMPASTO:</strong> 72 ore di lavoro non possono finire in una borsa di plastica.
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <span style="background-color: #fff; color: #000; padding: 0 5px;">03</span> 
+                    <strong>ESPERIENZA DIRETTA:</strong> La pizza si mangia calda, appena uscita dai 450°C del forno.
+                </li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 50px; background-color: #fff; color: #000; padding: 20px; text-align: center; font-weight: 900; font-size: 1.3rem;">
+            ALZATI. VIENI A PRENDERLA. <br>
+            <span style="font-size: 0.9rem;">VIA DELLA MASSIMILLA 80</span>
+        </div>
+
+    </div>
+</section>
+<section id="grandi-manovre" style="background-color: #000; padding: 100px 20px; color: #fff; font-family: 'Courier New', Courier, monospace; overflow: hidden;">
+    
+    <div style="max-width: 1000px; margin: 0 auto; border: 8px solid #fff; padding: 60px 40px; background-image: linear-gradient(45deg, #111 25%, transparent 25%, transparent 50%, #111 50%, #111 75%, transparent 75%, transparent); background-size: 100px 100px;">
+        
+        <h2 style="font-size: clamp(3rem, 10vw, 6rem); font-weight: 900; line-height: 0.8; margin-bottom: 50px; text-transform: uppercase; letter-spacing: -5px;">
+            GRANDI<br><span style="color: #ff4500;">MANOVRE</span>
+        </h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            
+            <div style="background: #fff; color: #000; padding: 25px; box-shadow: 15px 15px 0px #ff4500;">
+                <h3 style="margin: 0; font-size: 1.5rem; font-weight: 900;">01_IL_CARICO</h3>
+                <p style="margin-top: 15px; font-weight: bold; line-height: 1.4;">
+                    Selezione delle farine. Dosaggio millimetrico dell'acqua. 
+                    Inizio della maturazione forzata di 72 ore. 
+                    Nessuna interferenza esterna ammessa.
+                </p>
+            </div>
+
+            <div style="background: #fff; color: #000; padding: 25px; box-shadow: 15px 15px 0px #ff4500;">
+                <h3 style="margin: 0; font-size: 1.5rem; font-weight: 900;">02_IL_FUOCO</h3>
+                <p style="margin-top: 15px; font-weight: bold; line-height: 1.4;">
+                    Accensione sistema termico. Raggiungimento quota 450°C. 
+                    Stabilizzazione della pietra refrattaria. 
+                    Il monitor STATUS_FORNO segna VERDE.
+                </p>
+            </div>
+
+            <div style="background: #fff; color: #000; padding: 25px; box-shadow: 15px 15px 0px #ff4500;">
+                <h3 style="margin: 0; font-size: 1.5rem; font-weight: 900;">03_L_ATTACCO</h3>
+                <p style="margin-top: 15px; font-weight: bold; line-height: 1.4;">
+                    Stesura manuale. Infornata rapida. 
+                    90 secondi di trasformazione molecolare. 
+                    Emissione documento commerciale e consegna.
+                </p>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 80px; border-top: 2px solid #fff; padding-top: 20px; font-size: 0.8rem; color: #ff4500; font-weight: 900;">
+            LOG OPERATIVO: VIA DELLA MASSIMILLA 80, ROMA // ORE DI ATTIVITÀ: DINAMICHE // QUALITÀ: BRUTALE
+        </div>
+
+    </div>
+</section>
+<section id="premi" class="py-16 bg-[#121212] text-center">
         <div class="container mx-auto px-4">
             <h3 class="text-[#b71c1c] text-2xl font-bold mb-12 font-sync">ECCELLENZE</h3>
             
@@ -142,60 +329,7 @@
         </div>
     </section>
 
-   <section id="menu" class="py-20 bg-[#1a1a1a] text-center border-t border-[#333]">
-        <h3 class="text-3xl font-bold mb-12 font-sync text-[#b71c1c]">I PIÙ FAMOSI</h3>
-        <div class="container mx-auto px-4 max-w-6xl grid md:grid-cols-3 gap-8 mb-12">
-            
-            <div class="p-6 card-legno brutal-shadow-red text-left">
-                <div class="flex justify-between items-start font-bold text-lg">
-                    <span>MARGHERITA</span>
-                    <span class="text-white">€ 6,00</span>
-                </div>
-                <p class="text-[10px] uppercase text-zinc-400 mt-4 leading-relaxed">
-                    La regina delle pizze: pomodoro italiano, mozzarella filante e basilico fresco.
-                </p>
-                <div class="mt-4 pt-2 border-t border-zinc-800">
-                    <span class="text-[8px] text-[#b71c1c] font-bold uppercase tracking-widest">Allergeni: Glutine, Latte</span>
-                </div>
-            </div>
-
-            <div class="p-6 card-legno brutal-shadow-red text-left border-[#b71c1c]">
-                <div class="flex justify-between items-start font-bold text-lg text-[#b71c1c]">
-                    <span>PACHINO E BUFALA</span>
-                    <span>€ 8,00</span>
-                </div>
-                <p class="text-[10px] uppercase text-zinc-400 mt-4 leading-relaxed">
-                    Freschezza mediterranea: mozzarella di bufala DOP e pomodorini pachino dolci.
-                </p>
-                <div class="mt-4 pt-2 border-t border-zinc-800">
-                    <span class="text-[8px] text-[#b71c1c] font-bold uppercase tracking-widest">Allergeni: Glutine, Latte</span>
-                </div>
-            </div>
-
-            <div class="p-6 card-legno brutal-shadow-red text-left">
-                <div class="flex justify-between items-start font-bold text-lg">
-                    <span>SUPPLÌ CLASSICO</span>
-                    <span class="text-white">€ 1,00</span>
-                </div>
-                <p class="text-[10px] uppercase text-zinc-400 mt-4 leading-relaxed">
-                    Il cuore di Roma: riso al ragù e cuore di mozzarella filante.
-                </p>
-                <div class="mt-4 pt-2 border-t border-zinc-800">
-                    <span class="text-[8px] text-[#b71c1c] font-bold uppercase tracking-widest">Allergeni: Glutine, Latte, Sedano</span>
-                </div>
-            </div>
-
-        </div>
-        
-        <div class="flex flex-col items-center gap-4">
-            <a href="https://www.leggimenu.it/menu/pizzeria-anas?v=807534" target="_blank" class="inline-block bg-[#b71c1c] text-white font-black px-12 py-5 border-4 border-white uppercase italic hover:bg-white hover:text-black transition-all">
-                👉 SCOPRI TUTTE LE PIZZE E I FRITTI
-            </a>
-            <p class="text-[9px] text-zinc-500 font-sync uppercase opacity-50">Ultimo aggiornamento listino: 14-02-2026</p>
-        </div>
-    </section>
-
-    <section id="social" class="py-20 px-4 bg-[#121212]">
+ <section id="social" class="py-20 px-4 bg-[#121212]">
         <div class="container mx-auto">
             <h3 class="text-2xl font-bold mb-10 text-center font-sync">SOCIAL & RECENSIONI</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
@@ -217,7 +351,60 @@
         </div>
     </section>
 
-    <section id="dove" class="py-20 px-4 bg-[#1a1a1a] border-t border-[#333]">
+<section id="ultimo-round" style="background-color: #000; padding: 120px 20px; color: #fff; font-family: 'Courier New', Courier, monospace; text-align: center;">
+    
+    <div style="max-width: 800px; margin: 0 auto; border: 10px double #fff; padding: 60px 20px; background: #050505;">
+        
+        <h2 style="font-size: 5rem; font-weight: 900; margin: 0; line-height: 1; text-transform: uppercase; letter-spacing: -2px;">
+            ULTIMO<br>ROUND
+        </h2>
+
+        <div style="margin: 40px auto; width: 50px; height: 5px; background-color: #ff4500;"></div>
+
+        <p style="font-size: 1.4rem; font-weight: bold; text-transform: uppercase; margin-bottom: 30px;">
+            Serranda abbassata. <br>
+            Forno in raffreddamento. <br>
+            Impasti in maturazione per domani.
+        </p>
+
+        <div style="display: inline-block; border: 2px solid #00ff00; color: #00ff00; padding: 10px 20px; font-weight: 900; letter-spacing: 3px;">
+            SESSIONE COMPLETATA // 100% QUALITÀ
+        </div>
+
+        <div style="margin-top: 60px; font-size: 0.9rem; color: #444; text-transform: uppercase;">
+            <p>Le Grandi Manovre riprendono al prossimo turno.</p>
+            <p>Via della Massimilla 80, Roma.</p>
+        </div>
+
+    </div>
+
+    <div style="margin-top: 50px; color: #222; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;">
+        Registrazione Corrispettivi: PAGAMENTO POS RM / CONTANTI // Operazione Trasparenza
+    </div>
+
+</section>
+<section class="py-16 bg-white text-black">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-left md:w-1/2">
+                    <h3 class="text-3xl font-black font-sync mb-4 leading-none">IL VIAGGIO <br><span class="text-[#b71c1c]">VALE LA PENA</span></h3>
+                    <p class="text-xs font-bold uppercase tracking-widest opacity-70">Quanto sei disposto a muoverti per la perfezione?</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:w-1/2 w-full">
+                    <div class="p-4 border-2 border-black">
+                        <span class="block text-2xl font-black">15 MIN</span>
+                        <span class="text-[9px] font-bold uppercase">Dal Grande Raccordo Anulare</span>
+                    </div>
+                    <div class="p-4 border-2 border-black bg-black text-white">
+                        <span class="block text-2xl font-black">22 MIN</span>
+                        <span class="text-[9px] font-bold uppercase">Dal Centro di Roma (P.zza Venezia)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <section id="dove" class="py-20 px-4 bg-[#1a1a1a] border-t border-[#333]">
         <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <h3 class="text-3xl font-bold italic mb-6 text-[#b71c1c] font-sync">CONTATTI</h3>
@@ -233,7 +420,6 @@
                     </div>
                     <div class="p-3 border border-zinc-700 font-bold text-[11px] flex justify-between items-center">
                         <span class="text-[#b71c1c]">🛡️ AREA VIDEOSORVEGLIANZA</span>
-                        <span class="italic opacity-50 font-sync text-[8px]">myPOS</span>
                     </div>
                 </div>
                 <a href="tel:0670451243" class="block text-3xl font-bold text-center p-6 bg-white text-black border-4 border-[#b71c1c] hover:bg-[#b71c1c] hover:text-white transition-all font-sync italic">📞 06 7045 1243</a>
@@ -252,73 +438,58 @@
             </div>
         </div>
     </section>
-
-   <section class="py-24 bg-black text-white overflow-hidden relative border-y-4 border-[#b71c1c]">
-        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
-        <div class="container mx-auto px-4 relative z-10 text-center">
-            <h3 class="text-4xl md:text-6xl font-black mb-8 font-sync italic tracking-tighter">LA CUCINA È SACRA</h3>
-            <div class="max-w-3xl mx-auto space-y-6">
-                <p class="text-xl md:text-2xl font-bold uppercase leading-tight">
-                    "Non vendiamo solo cibo. Difendiamo un'idea."
-                </p>
-                <div class="h-1 w-24 bg-[#b71c1c] mx-auto"></div>
-                <p class="text-xs md:text-sm tracking-[0.3em] uppercase opacity-70 leading-loose">
-                    In un mondo di pizze industriali e chef-influencer, noi scegliamo il silenzio. 
-                    Il nostro impasto matura nel buio, lontano da occhi estranei. 
-                    Non chiedete di vedere, chiedete di assaggiare. Questa è la nostra unica verità.
-                </p>
-                <p class="text-[10px] font-black text-[#b71c1c] mt-10 italic">DAL 2015, NESSUNA DEROGA AL METODO ANAS.</p>
-            </div>
+<section id="allergeni" style="background-color: #000; padding: 100px 20px; color: #fff; font-family: 'Courier New', Courier, monospace;">
+    
+    <div style="max-width: 900px; margin: 0 auto; border: 4px solid #fff; padding: 40px; box-shadow: 15px 15px 0px #222;">
+        
+        <div style="background-color: #fff; color: #000; display: inline-block; padding: 5px 20px; font-weight: 900; font-size: 1.5rem; margin-bottom: 30px;">
+            PROTOCOLLO_ALLERGENI_REG.UE_1169/2011
         </div>
-    </section>
 
-    <section class="py-20 bg-[#121212] border-b border-zinc-800">
-        <div class="container mx-auto px-4 text-center">
-            <h3 class="text-xl font-bold mb-12 font-sync text-[#5d4037]">LA FILIERA DEGLI ELETTI</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 opacity-60 grayscale hover:grayscale-0 transition-all">
-                <div class="p-6 border border-zinc-800 bg-black">
-                    <p class="text-[10px] font-bold text-white mb-2 italic text-[#b71c1c]">FARINA</p>
-                    <p class="text-[8px] uppercase tracking-widest">Grani Antichi Italiani</p>
-                </div>
-                <div class="p-6 border border-zinc-800 bg-black">
-                    <p class="text-[10px] font-bold text-white mb-2 italic text-[#b71c1c]">LATTICINI</p>
-                    <p class="text-[8px] uppercase tracking-widest">Caseifici Laziali Selezionati</p>
-                </div>
-                <div class="p-6 border border-zinc-800 bg-black">
-                    <p class="text-[10px] font-bold text-white mb-2 italic text-[#b71c1c]">POMODORO</p>
-                    <p class="text-[8px] uppercase tracking-widest">Solo Polpa Certificata</p>
-                </div>
-                <div class="p-6 border border-zinc-800 bg-black">
-                    <p class="text-[10px] font-bold text-white mb-2 italic text-[#b71c1c]">OLIO</p>
-                    <p class="text-[8px] uppercase tracking-widest">Estratto a Freddo ITA</p>
-                </div>
+        <h2 style="font-size: 2.5rem; font-weight: 900; text-transform: uppercase; margin-bottom: 20px; line-height: 1;">
+            TRASPARENZA<br>RADICALE
+        </h2>
+
+        <p style="font-size: 1.1rem; border-left: 5px solid #ff4500; padding-left: 20px; margin-bottom: 40px; color: #bbb;">
+            La tua sicurezza è parte della nostra qualità. Ogni ingrediente è tracciato. <br>
+            Consulta la tabella tecnica qui sotto prima di procedere all'ordine.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; text-align: center;">
+            
+            <div style="border: 1px solid #444; padding: 15px; background: #0a0a0a;">
+                <span style="display: block; font-size: 1.2rem; font-weight: 900;">GLUTINE</span>
+                <span style="font-size: 0.8rem; color: #666;">Presente in tutti gli impasti.</span>
             </div>
-            <p class="mt-8 text-[9px] text-zinc-600 uppercase italic">Siamo così sicuri della nostra mano che vi mostriamo le nostre armi.</p>
-        </div>
-    </section>
 
-    <section class="py-16 bg-white text-black">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="text-left md:w-1/2">
-                    <h3 class="text-3xl font-black font-sync mb-4 leading-none">IL VIAGGIO <br><span class="text-[#b71c1c]">VALE LA PESA</span></h3>
-                    <p class="text-xs font-bold uppercase tracking-widest opacity-70">Quanto sei disposto a muoverti per la perfezione?</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:w-1/2 w-full">
-                    <div class="p-4 border-2 border-black">
-                        <span class="block text-2xl font-black">15 MIN</span>
-                        <span class="text-[9px] font-bold uppercase">Dal Grande Raccordo Anulare</span>
-                    </div>
-                    <div class="p-4 border-2 border-black bg-black text-white">
-                        <span class="block text-2xl font-black">22 MIN</span>
-                        <span class="text-[9px] font-bold uppercase">Dal Centro di Roma (P.zza Venezia)</span>
-                    </div>
-                </div>
+            <div style="border: 1px solid #444; padding: 15px; background: #0a0a0a;">
+                <span style="display: block; font-size: 1.2rem; font-weight: 900;">LATTOSIO</span>
+                <span style="font-size: 0.8rem; color: #666;">Presente in latticini e derivati.</span>
             </div>
-        </div>
-    </section>
 
- <section id="regolamento" class="py-20 px-4 bg-[#121212]">
+            <div style="border: 1px solid #444; padding: 15px; background: #0a0a0a;">
+                <span style="display: block; font-size: 1.2rem; font-weight: 900;">FRUTTA GUSCIO</span>
+                <span style="font-size: 0.8rem; color: #666;">Possibile contaminazione crociata.</span>
+            </div>
+
+            <div style="border: 1px solid #444; padding: 15px; background: #0a0a0a;">
+                <span style="display: block; font-size: 1.2rem; font-weight: 900;">SOIA</span>
+                <span style="font-size: 0.8rem; color: #666;">Tracce possibili in alcune farine.</span>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 40px; padding: 20px; border: 2px dashed #ff4500; background-color: #111;">
+            <p style="margin: 0; font-weight: bold; font-size: 1rem; color: #ff4500;">
+                ATTENZIONE: Se hai allergie gravi, comunicalo immediatamente al banco prima dell'emissione del documento commerciale. 
+            </p>
+        </div>
+
+        <div style="margin-top: 30px; text-align: right;">
+            
+    </div>
+</section>
+<section id="regolamento" class="py-20 px-4 bg-[#121212]">
         <div class="container mx-auto max-w-5xl">
             <div class="bg-black p-8 border-4 border-[#5d4037] brutal-shadow-red">
                 <h3 class="text-xl font-black mb-1 text-[#b71c1c] text-center font-sync italic">REGOLAMENTO INTERNO E NORME DI COMPORTAMENTO</h3>
